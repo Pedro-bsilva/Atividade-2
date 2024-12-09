@@ -1,0 +1,364 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 60px;
+}
+
+/* HEADER */
+header {
+    background-color: #f8f409;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header .logo-container img {
+    height: 50px;
+}
+
+nav {
+    margin-left: auto; /* Garante que o menu fique à direita */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4e09bd;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #73ff57;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.menu-toggle span {
+    background-color: #fff;
+    height: 4px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo-container {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: left;
+        background-color: #28da40;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    .notification {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        top: 0;
+    }
+
+    .notification p {
+        font-size: 1.5rem;
+    }
+
+    .notification .phone-number {
+        font-size: 1.4rem;
+    }
+}
+
+/* NOTIFICAÇÃO - Efeito piscando para o texto "24h" */
+.notification p {
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+    animation: piscar 1s infinite alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* Ajuste conforme necessário */
+    z-index: 10;
+}
+
+.notification p {
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+    animation: piscar 1s infinite alternate;
+}
+
+.notification .phone-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: darkblue; 
+    margin-left: 10px;
+    animation: none; 
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* HOME SECTION */
+.home-section {
+    background: url('assets/home-background.jpg') no-repeat center center/cover;
+    color: #db0a0a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.home-text {
+    text-align: center;
+    max-width: 800px;
+}
+
+.home-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.home-text p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #002060; 
+}
+.home-text .cta-button {
+    padding: 20px 40px;
+    background-color: #73ff57;
+    color: #03057c;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.home-text .cta-button:hover {
+    background-color: #002060; /* Azul escuro ao passar o mouse */
+    color: #73ff57; /* Opcional: texto branco para melhor contraste */
+}
+
+
+/* SERVIÇOS SECTION */
+.servicos-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicos-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #03057c;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.servicos-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.servico-item {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    padding: 20px;
+    background-color: #c7c7c7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servico-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #DB0A0A;
+}
+
+.servico-item p {
+    font-size: 1rem;
+    color: #03057c;
+    line-height: 1.5;
+}
+
+.servico-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTATO SECTION */
+.contato-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #73ff57; /* Verde destacado */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.contato-section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #03057c; /* Azul escuro */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9; /* Fundo claro */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4e09bd; /* Roxo */
+    outline: none;
+    box-shadow: 0 0 8px rgba(78, 9, 189, 0.4);
+    background-color: #ffffff; /* Destaque ao focar */
+}
+
+form button {
+    padding: 15px 20px;
+    background-color: #73ff57; /* Verde do CTA */
+    color: #03057c; /* Azul escuro */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #4120fd; 
+    transform: translateY(-3px); 
+    color: #ffffff; 
+}
+
+form textarea {
+    min-height: 150px; 
+}
+
+footer {
+    background-color: #f8f409; /* Cor igual ao cabeçalho */
+    color: rgb(28, 8, 114);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    
+}
+
+footer p {
+    font-size: 1.2rem; /* Aumentei o tamanho da fonte para dar mais destaque */
+    margin-top: 10px;
+    font-weight: bold; /* Tornando o texto mais destacado */
+}
+
+footer a {
+    color: white; /* Caso queira adicionar links no rodapé */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+

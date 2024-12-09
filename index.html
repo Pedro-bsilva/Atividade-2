@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desentupidora RolaBosta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo Desentupidora Rola Bosta">
+        </div>
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Texto "24h" piscando adicionado aqui -->
+        <div class="notification">
+            <p>24h</p>
+        </div>
+        <div class="notification">
+            <p>24h</p>
+            <span class="phone-number">(81)3268-2023</span>
+        </div>
+        
+    </header>
+
+    <main>
+        <section id="home" class="home-section">
+            <div class="home-text">
+                <h1>DESENTUPIDORA ROLA BOSTA</h1>
+                <p>Seu problema, nossa solução. Estamos sempre prontos para atender com rapidez e qualidade.</p>
+                <a href="#contato" class="cta-button">Solicite um Orçamento</a>
+            </div>
+            <div class="home-image">
+                <img src="assets/images/desentupidora.png" alt="Imagem Desentupidora" />
+            </div>
+        </section>
+
+        <section id="servicos" class="servicos-section">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-list">
+                <div class="servico-item">
+                    <h3>Desentupimento de Pias</h3>
+                    <p>Resolva o problema de pias entupidas de forma rápida e eficaz.</p>
+                </div>
+                <div class="servico-item">
+                    <h3>Desentupimento de Vasos Sanitários</h3>
+                    <p>Serviço rápido e eficiente para desentupir vasos sanitários com segurança.</p>
+                </div>
+                <div class="servico-item">
+                    <h3>Limpeza de Fossas</h3>
+                    <p>Limpeza de fossas e sistemas de esgoto para garantir o funcionamento ideal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato-section">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Nome" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Desentupidora Rolabosta | Todos os direitos reservados</p>
+    </footer>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
